@@ -16,6 +16,12 @@ Or install it yourself as:
 
     $ gem install common_assets
 
+Add this line to your application.css
+
+	*= require reset
+	*= require best_in_place
+	*= require common
+
 ## Usage
 
 TODO: Write usage instructions here
