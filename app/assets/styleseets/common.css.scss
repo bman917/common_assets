@@ -1,3 +1,20 @@
 .hidden {
-	display: none;
+  display: none;
+}
+
+table {
+ th, tr, tr.even, td {
+   .no_border {
+      border: 0;
+    }
+
+    .no_bg {
+      background: none;
+    }
+  }
+}
+
+/* this is to override blueprintcss's typography css */
+tbody tr:nth-child(even) td.no_bg, tbody tr.even td.no_bg {
+      background: none;
 }
