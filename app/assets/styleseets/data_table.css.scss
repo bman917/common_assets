@@ -18,6 +18,17 @@
   display: block;
   float: right;
   margin: 0 1em;  
+
+  a {
+    padding: 3px 3px;
+    float: none;
+    border: 1px solid #4C6432;
+    background: #8FA577;
+    color: white;
+    text-decoration: none;
+    font-size: .8em;
+    cursor: pointer;
+  }    
 }
 
 .fg-button {
