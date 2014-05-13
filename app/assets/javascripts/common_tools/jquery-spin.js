@@ -79,4 +79,11 @@ $('#el').spin('flower', 'red');
     large: { lines: 10, length: 8, width: 4, radius: 8 }
   }
 
+  $.fn.stop_spinner = function() {
+    var data = $(this).data();
+    if (data.spinner) {
+      data.spinner.stop();
+      delete data.spinner;
+    }
+  }
 }));

@@ -9,6 +9,11 @@ function focus_on_next_tab() {
   $("[tabindex='" + nexttab + "']").focus();
 }
 
+function flash_success(message) {
+    var container = jQuery("<span class='flash-success'></span>").html(message);
+    container.purr({removeTimer: 1500});
+}
+
 jQuery.fn.center = function () {
     this.css("position","absolute");
     this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + 
