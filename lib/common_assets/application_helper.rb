@@ -1,10 +1,16 @@
 module ApplicationHelper
-  def delete_img
-    image_tag 'gtk-delete.png', size: '14x14', alt: 'Delete', title: 'Delete'
+  def delete_img(options={})
+    options[:size] ||= '14x14'
+    options[:alt]  ||= 'Delete'
+    options[:title]||= 'Delete'
+    image_tag 'gtk-delete.png', options
   end
 
-  def edit_img
-    image_tag 'gtk-edit.png', size: '14x14', alt: 'Edit', title: 'Edit'
+  def edit_img(options={})
+    options[:size] ||= '14x14'
+    options[:alt]  ||= 'Edit'
+    options[:title]||= 'Edit'
+    image_tag 'gtk-edit.png', options
   end
 
   def locked_img(title='Locked', options={size: '14x14'})
