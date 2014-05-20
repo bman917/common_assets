@@ -1,4 +1,11 @@
 module ApplicationHelper
+
+  def view_img(options={})
+    options[:alt]  ||= 'View'
+    options[:title]||= 'View'
+    image_tag '32px-Folder-orange.svg.png', options
+  end
+
   def delete_img(options={})
     options[:size] ||= '14x14'
     options[:alt]  ||= 'Delete'
