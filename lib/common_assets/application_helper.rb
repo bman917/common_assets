@@ -1,5 +1,12 @@
 module ApplicationHelper
 
+  def add_img(options={})
+    options[:size] ||= '14x14'
+    options[:alt]  ||= 'Add'
+    options[:title]||= 'Add'
+    image_tag 'add_icon.png', options
+  end
+
   def view_img(options={})
     options[:alt]  ||= 'View'
     options[:title]||= 'View'
