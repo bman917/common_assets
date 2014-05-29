@@ -1,5 +1,25 @@
 module ApplicationHelper
 
+=begin
+Adds an overlay and renders the form on top of the overlay.
+In order for this to work, the following setup has to be followed.
+For example, given a Model called 'Profile' there need to be:
+
+  app/views/profiles/new.js.erb --> this should be the one who use this method:
+    <%=overlay_form class_name: 'profile'%>
+
+  app/views/profiles/_form --> this will be the modal form
+
+  The form need to be enclosed in this div with id = "#{class_name}_form_container"
+    <div id="profile_form_container">...</div>
+  The form id should be = "new_#{class_name}_form":
+    <form id="new_profile_form">...</form>
+=end
+  def overlay_form(options={})
+    render partial: 'common_assets/overlay_form', locals: options
+  end
+
+
   def add_img(options={})
     options[:size] ||= '16x16'
     options[:alt]  ||= 'Add'

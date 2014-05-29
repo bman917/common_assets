@@ -1,0 +1,7 @@
+$('body').append('<div class="overlay-5"></div>');
+$('body').append('<%=j render("form")%>');
+$('#<%=class_name%>_form_container').center();
+$('#<%=class_name%>_form_container').addClass('modal-1');
+$('#<%=class_name%>_form_container').hide().slideDown('fast', function() {
+  $('#new_<%=class_name%>_form input:text').first().focus();
+});

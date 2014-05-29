@@ -2,7 +2,7 @@
   display: none;
 }
 
-table {
+table, table.common {
  th, tr, tr.even, td {
    .no_border {
       border: 0;
@@ -11,6 +11,16 @@ table {
     .no_bg {
       background: none;
     }
+  }
+
+  .w-2  {width: 2em;}
+  .w-4  {width: 4em;}
+  .w-6  {width: 6em;}
+  .w-8  {width: 8em;}
+  .w-10  {width: 10em;}
+  .w-datetime {width: 14em;}
+  .text {
+    padding: .5em;
   }
 }
 
