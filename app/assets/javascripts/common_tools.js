@@ -22,3 +22,8 @@ jQuery.fn.center = function () {
                                                 $(window).scrollLeft()) + "px");
     return this;
 }
+
+function modal_form_close() {
+    $('#modal_form_container').slideUp('fast', function(){$(this).remove();});
+    $('.overlay-5').fadeOut('fast', function(){$(this).remove();}); 
+}

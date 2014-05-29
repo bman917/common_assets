@@ -1,7 +1,16 @@
+remove_overlay();
+
 $('body').append('<div class="overlay-5"></div>');
-$('body').append('<%=j render("form")%>');
-$('#<%=class_name%>_form_container').center();
-$('#<%=class_name%>_form_container').addClass('modal-1');
-$('#<%=class_name%>_form_container').hide().slideDown('fast', function() {
-  $('#new_<%=class_name%>_form input:text').first().focus();
+$('body').append('<div id="modal_form_container" class="modal-1 modal_form"></div>');
+$('#modal_form_container').append('<%=j render("form")%>');
+$('#modal_form_container').center();
+$('#modal_form_container').hide().slideDown('fast', function() {
+  $('#modal_form_container form input:text').first().focus();
+});
+
+//Add Close Link...
+$('#modal_form_container form').prepend('<%= j link_to 'Close', '', class: 'close std_button'%>');
+$('#modal_form_container a.close').on('click', function(e){
+  e.preventDefault();
+  modal_form_close();
 });
