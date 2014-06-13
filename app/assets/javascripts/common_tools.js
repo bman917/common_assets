@@ -11,7 +11,7 @@ function focus_on_next_tab() {
 
 function flash_success(message) {
     var container = jQuery("<span class='flash-success'></span>").html(message);
-    container.purr({removeTimer: 1500});
+    container.purr({removeTimer: 4000});
 }
 
 jQuery.fn.center = function () {
