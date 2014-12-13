@@ -57,3 +57,41 @@ tbody tr:nth-child(even) td.no_bg, tbody tr.even td.no_bg {
 .flash-error:before {
   content: "ERROR SAVING: ";
 }
+
+/* overlay styles, all needed */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.overlay-5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+
+.modal {
+  height: 40px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  text-align: center;
+  z-index: 11; /* 1px higher than the overlay layer */
+}
+
+.modal-1 {
+    z-index: 15; /* 1px higher than the overlay layer */
+}
+
+
+
